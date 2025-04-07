@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#317EFB" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icon-192.png" />
+  <title>Ecommerce PWA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
+    header {
+      background-color: #317EFB;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.02); }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .card-body p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: #317EFB;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #256bd1;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MyShop - Progressive Ecommerce</h1>
+  </header>
+  <main class="container">
+    <div class="card">
+      <img src="images/smartwatch.png" alt="Product" />
+      <div class="card-body">
+        <h3>Smartwatch</h3>
+        <p>Track fitness, get notifications, and look stylish with our Smartwatch.</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/headphone.png" alt="Product" />
+      <div class="card-body">
+        <h3>Wireless Headphones</h3>
+        <p>Enjoy your music with crystal clear sound and no wires.</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/backpack.png" alt="Product" />
+      <div class="card-body">
+        <h3>Backpack</h3>
+        <p>Stylish and spacious backpack for your daily needs.</p>
+        <button class="btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 MyShop. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
